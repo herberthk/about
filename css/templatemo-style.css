@@ -1,20 +1,15 @@
-/*
-
-Lavish HTML CSS Template
-
-https://templatemo.com/tm-458-lavish
-		
-*/
-
 body
 {
 	background: #000000;
 	color: #999;
 	font-family: 'Raleway', sans-serif;
 	font-size: 16px;
-	font-weight: 400;
+    font-weight: 400;
+    overflow-x: hidden;
 }
-
+.center_align{
+    text-align: center;
+}
 /* start all section */
 #home,
 #home .fp-slide,
@@ -60,7 +55,14 @@ h1,h2,h3,h4,h5
         padding-bottom: 120px;
     }
 /* end all section */
-
+.desc{
+    color: #ffffff;
+    /* font-weight: bold; */
+    line-height: 2;
+}
+.mytitle{
+    font-family: 'Lobster', cursive;
+}
 /* start simpletextrotator */
 .rotating {
   display: inline-block;
@@ -81,7 +83,21 @@ h1,h2,h3,h4,h5
   transition: 0.5s;
   -webkit-transform-origin-x: 50%;
 }
-
+.tecnologies{
+    list-style: none;
+}
+.tecnologies li{
+    float: left;
+    margin: 10px;
+    cursor: pointer;
+    transition: all .5s linear;
+}
+.tecnologies li:hover{
+    transform: scale(1.13);
+}
+.tecnologies li:first-child{
+    margin-left: 0!important;
+}
 .rotating.flip {
   position: relative;
 }
@@ -180,8 +196,11 @@ h1,h2,h3,h4,h5
 	}
 #home h1
     {
-        border: 2px solid #D43F52;
-        color: #D43F52;
+        border-bottom: 15px solid #fd3838;
+        border-left: 4px solid;
+        border-right: 4px solid;
+        border-top: 4px solid teal;
+        color: orange;
         display: inline-block;
         letter-spacing: 6px;
         padding: 25px 35px;
@@ -190,8 +209,9 @@ h1,h2,h3,h4,h5
 #home h2
     {
         padding-bottom: 10px;
+        font-size: 5rem;
     }
-#home .btn
+ .mybtn
     {
         background: transparent;
         border: 2px solid #ffffff;
@@ -201,13 +221,22 @@ h1,h2,h3,h4,h5
         width: 180px;
         height: 60px;
         margin-top: 40px;
-        padding-top: 18px;
+        padding: 18px;
         transition: all 0.4s ease-in-out;
+        text-decoration: none;
+        outline: none;
+        margin: 2rem;
     }
-#home .btn:hover
+    .mybtn:active,.mybtn:focus{
+        outline: none;
+        text-decoration: none;
+    }
+  .mybtn:hover
     {
-        background: #D43F52;
+        background: orange;
         border-color: transparent;
+        text-decoration: none;
+        color: #fff;
     }
 /* end home */
 
@@ -226,7 +255,7 @@ h1,h2,h3,h4,h5
       margin-top: 30px;
     }
 	
-#work .media .fa
+#work .media .fa,#work .media .fas
     {
         border: 2px solid #ffffff;
         border-radius: 50%;
@@ -239,8 +268,9 @@ h1,h2,h3,h4,h5
         text-align: center;
         vertical-align: middle;
         transition: all 0.4s ease-in;
+        cursor: pointer;
     }
-#work .media .fa:hover
+#work .media .fa:hover,#work .media .fas:hover
     {
         background: #ffffff;
         cursor: pointer;
@@ -339,7 +369,7 @@ h1,h2,h3,h4,h5
         padding-bottom: 20px;
 		color: #ffffff;
     }
-#contact .fa
+#contact .fa,#contact .fas
     {
         border: 2px solid #ffffff;
         border-radius: 50%;
